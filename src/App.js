@@ -10,6 +10,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>sofias test</p>
+        <p>sofias 2.test</p>
       </header>
     </div>
   );
