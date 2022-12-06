@@ -2,33 +2,39 @@ import React, { useEffect, useState } from 'react';
 
 function Pokedex() {
     const [data, setData] = useState([]);
-    const [pokemon, setPokemon] = useState([]);
-    const pokedexEmpty = [];
+    const [pokedexEmpty, setPokedexEmpty] = useState([]);
 
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon?limit=151`)
             //fetch(`https://pokeapi.co/api/v2/type/`)
             .then((response) => response.json())
-            .then((data) => {
-                setData(data.results)
-                console.log(data.results[0].name);
+            .then((eichhörnchen) => {
+                // durch setData(eichhörnchen.results) wird in das objekt "eichhörnchen" in ein Array "results" umgeschrieben
+                setData(eichhörnchen.results)
             })
             .then(() => {
                 data.map((singlePokemon) => {
+                    //data.map geht das komplette Array durch und nimmt von jedem Element im Array den Wert und gibt diesen weiter an den fetch-Befehl
                     console.log(singlePokemon);
                     fetch(`https://pokeapi.co/api/v2/pokemon/${singlePokemon.name}`)
                         .then((response) => response.json())
                         .then((pokemon) => {
-                            //setPokemon(pokemon)
-                            pokedexEmpty.push(pokemon)
+                            setPokedexEmpty(pokedexEmpty => [...pokedexEmpty, pokemon])
                             console.log(pokemon)
                         })
+                    return;
                 })
             })
     }, [])
     console.log(data);
-    console.log(pokedexEmpty)
+    console.log(pokedexEmpty);
+    // return (
+    //     // <div>
+    //     //     {pokedexEmpty.map((Pokemon) => {
+    //     //         return <Pokemon key={Pokemon.id} img={Pokemon.sprites.front_default} name={Pokemon.name} number={Pokemon.id} />
+    //     //     })} <p>test</p>
+    //     // </div>
+    // )
 }
 
-
-export default Pokedex
+export default Pokedex;
