@@ -12,7 +12,7 @@ function Pokemon(props) {
             .then((pokeData) => {
                 setImgData(pokeData.sprites.front_default)
                 setIdData(pokeData.id)
-                console.log(pokeData);
+                // console.log(pokeData);
             })
     }, [])
 
