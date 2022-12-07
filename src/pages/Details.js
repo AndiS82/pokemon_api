@@ -9,7 +9,7 @@ function DetailView() {
 
     // const [imgData, setImgData] = useState([]);
     const [idData, setIdData] = useState([]);
-    const Abilities = idData.abilities
+    const [abilities, setAbilities] = useState([])
     const Result = []
     // { console.log(idData.abilities[0].ability.name) }
     // { console.log(idData.moves) }
@@ -19,13 +19,9 @@ function DetailView() {
             .then((pokeData) => {
                 // setImgData(pokeData.sprites.front_default)
                 setIdData(pokeData)
+                setAbilities(pokeData.abilities)
                 // console.log(pokeData);
             })
-        // { console.log(idData.abilities[0].ability.name) }
-        Abilities.forEach((ability, index) => {
-            Result.push
-                (<p key={index}>{ability.name}</p>)
-        })
     }, [])
 
 
@@ -35,7 +31,10 @@ function DetailView() {
             <Logo />
             <Pokemon key={idData.id} name={"clefairy"} />
             <PokeDetails key={idData.id - 2} />
-            <Attacks />
+            {abilities.map((singleAbility, index) => {
+                return <Attacks key={index} abilities={singleAbility.ability.name} />
+            })}
+            {console.log(abilities[0])}
             <Movements />
         </ section>
     )
