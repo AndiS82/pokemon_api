@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Pokemon from './Pokemon/Pokemon';
 
 function Pokedex() {
     const [data, setData] = useState([]);
@@ -27,24 +28,12 @@ function Pokedex() {
         // })
     }, [])
 
-    function GetPokePic(pokeName) {
-        const [name, setName] = useState([]);
-        fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
-            .then((response) => response.json())
-            .then((newName) => {
-                setName(newName)
-                console.log(newName);
-            })
-        return name.sprites.front_default
-    }
-
-
     console.log(data);
     console.log(pokedexEmpty);
     return (
         <div>
             {data.map((Pokemon) => {
-                return <Pokemon key={Pokemon.id} img={GetPokePic(Pokemon.name)} name={Pokemon.name} number={Pokemon.id} />
+                return <Pokemon key={Pokemon.id} name={Pokemon.name} number={Pokemon.id} />
             })} <p>test</p>
         </div>
     )
