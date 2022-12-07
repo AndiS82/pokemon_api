@@ -18,7 +18,7 @@ function Pokemon(props) {
 
     return (
         <div className="imgBox">
-            {console.log(idData)}
+            {/* {console.log(idData)} */}
             <img src={imgData}></img>
             <section className="pokeData">
                 <p className="pokeNumber">{idData < 10 ? `#00` : idData < 100 ? `#0` : `#`}{idData}</p>
