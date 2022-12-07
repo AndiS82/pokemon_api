@@ -20,7 +20,7 @@ function Pokedex() {
             {data.map((singlePokemon, index) => {
                 console.log(singlePokemon.id);
                 return <Pokemon key={index} name={singlePokemon.name} />
-            })} <p>test</p>
+            })}
         </div>
     )
 }

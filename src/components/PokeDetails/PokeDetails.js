@@ -1,36 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
-function Details() {
 
-
-    // const [imgData, setImgData] = useState([]);
-    const [idData, setIdData] = useState([]);
-
-    useEffect(() => {
-        fetch(`https://pokeapi.co/api/v2/pokemon/${"clefairy"}`)
-            .then((response) => response.json())
-            .then((pokeData) => {
-                // setImgData(pokeData.sprites.front_default)
-                setIdData(pokeData)
-                console.log(pokeData);
-            })
-    }, [])
+function PokeDetails(props) {
 
     return (
-        <aricle>
+        <article>
             <section>
-                <p>Bild</p>
-                <p className="pokeNameDetail">{idData.name}</p>
-            </section>
-            <section>
-                <p> typenbeschreibung</p>
+                <p> {props.type}</p>
             </section>
             <section>
                 <p>
-                    attack and movement
+                    {props.abilties}
                 </p>
             </section>
-        </aricle>
+        </article>
     )
 }
-export default Details
+export default PokeDetails
