@@ -16,12 +16,12 @@ function Pokemon(props) {
                 // console.log(pokeData);
             })
     }, [])
-    console.log("test")
+    // console.log("test")
     return (
         <div className="imgBox">
             <Link to={`/details/${props.name}`}>
-                <div>
-                    <p>test pokemon</p>
+                <div id="bkgYellow">
+                    {/* <p>test pokemon</p> */}
                     <img src={imgData}></img>
                     <section className="pokeData">
                         <p className="pokeNumber">{idData < 10 ? `#00` : idData < 100 ? `#0` : `#`}{idData}</p>

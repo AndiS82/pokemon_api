@@ -1,8 +1,73 @@
 .App {
   text-align: center;
   background-color: #c4eafa;
-  height: 100vh;
 }
+
+/* Sofias Styling */
+.topSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .input {
+  width: 200px;
+} */
+
+.navtog {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imgBox {
+  /* border: 2px solid black; */
+  margin: 15px;
+}
+
+.imgBox div img {
+  border: 2px solig green;
+}
+
+.bkgYellow {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(60deg, rgb(241, 239, 216) 0%, rgb(249, 200, 3) 100%);
+  ;
+}
+
+.pokeData {
+  height: 50px;
+  background-color: white;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.pokeData p {
+  text-decoration: none;
+  /* das text dekor will gerade nicht verschwinden und ich komme nicht auf den fehler... */
+  color: black;
+  /* Die farbe nimmt er aber. lol */
+  padding: 5px;
+  text-align: center;
+
+}
+
+.pokeNumber {
+  margin: auto 0;
+  padding: 0;
+}
+
+.pokeName {
+  margin: auto 0;
+  padding: 0;
+}
+
+/* a:link {
+  color: white;
+} */
+
+
+/* Sofia Ende */
 
 .App-logo {
   height: 40vmin;
