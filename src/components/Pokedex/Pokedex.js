@@ -12,29 +12,42 @@ function Pokedex() {
                 // durch setData(eichhörnchen.results) wird in das objekt "eichhörnchen" in ein Array "results" umgeschrieben
                 setData(eichhörnchen.results)
             })
-            .then(() => {
-                data.map((singlePokemon) => {
-                    //data.map geht das komplette Array durch und nimmt von jedem Element im Array den Wert und gibt diesen weiter an den fetch-Befehl
-                    console.log(singlePokemon);
-                    fetch(`https://pokeapi.co/api/v2/pokemon/${singlePokemon.name}`)
-                        .then((response) => response.json())
-                        .then((pokemon) => {
-                            setPokedexEmpty(pokedexEmpty => [...pokedexEmpty, pokemon])
-                            console.log(pokemon)
-                        })
-                    return;
-                })
-            })
+        //.then(() => {
+        // data.map((singlePokemon) => {
+        //     //data.map geht das komplette Array durch und nimmt von jedem Element im Array den Wert und gibt diesen weiter an den fetch-Befehl
+        //     console.log(singlePokemon);
+        //     fetch(`https://pokeapi.co/api/v2/pokemon/${singlePokemon.name}`)
+        //         .then((response) => response.json())
+        //         .then((pokemon) => {
+        //             setPokedexEmpty(pokemon)
+        //             console.log(pokemon);
+        //         })
+        //     return;
+        //     })
+        // })
     }, [])
+
+    function GetPokePic(pokeName) {
+        const [name, setName] = useState([]);
+        fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
+            .then((response) => response.json())
+            .then((newName) => {
+                setName(newName)
+                console.log(newName);
+            })
+        return name.sprites.front_default
+    }
+
+
     console.log(data);
     console.log(pokedexEmpty);
-    // return (
-    //     // <div>
-    //     //     {pokedexEmpty.map((Pokemon) => {
-    //     //         return <Pokemon key={Pokemon.id} img={Pokemon.sprites.front_default} name={Pokemon.name} number={Pokemon.id} />
-    //     //     })} <p>test</p>
-    //     // </div>
-    // )
+    return (
+        <div>
+            {data.map((Pokemon) => {
+                return <Pokemon key={Pokemon.id} img={GetPokePic(Pokemon.name)} name={Pokemon.name} number={Pokemon.id} />
+            })} <p>test</p>
+        </div>
+    )
 }
 
 export default Pokedex;
