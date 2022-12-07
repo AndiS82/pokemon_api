@@ -58,7 +58,7 @@ function Pokedex() {
 
     return (
         <div>
-            <section>
+            <section id="topSection">
                 <Link to={"/menu"}>
                     <img src={burger} />
                 </Link>
@@ -71,8 +71,8 @@ function Pokedex() {
                 <Pokemon key={inputname} name={inputname} />
             </div> */}
             <div className={navtog}> {useAbleData.map((singlePokemon, index) => {
-                console.log(navtog)
-                console.log(singlePokemon)
+                // console.log(navtog)
+                // console.log(singlePokemon)
                 return <Pokemon key={index} name={singlePokemon.name} />
             })}
             </div>
