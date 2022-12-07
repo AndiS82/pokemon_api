@@ -14,9 +14,8 @@ function App() {
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="Menu" element={<Menu />} />
-          <Route path="Details" element={<Details />} />
-          {/* <Pokedex></Pokedex> */}
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/details" element={<Details />} />
         </Routes>
       </Router>
     </div>
