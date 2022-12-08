@@ -34,7 +34,7 @@ function DetailView() {
     return (
         < section >
             <Logo />
-            <Pokemon key={idData.id} name={name} />
+            <Pokemon key={idData.id} name={name} class={"pokeDetailStyle"} />
             <PokeDetails key={idData.id - 2} />
             <div className='typeWrapper'>
                 {typeData.map((singleType) => {

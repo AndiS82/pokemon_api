@@ -21,8 +21,8 @@ function Pokemon(props) {
             <Link to={`/details/${props.name}`} className="Link">
                 <div className="bkgYellow">
                     <img src={imgData}></img>
-                    <section className="pokeData">
-                        <p className="pokeNumber">{idData < 10 ? `#00` : idData < 100 ? `#0` : `#`}{idData}</p>
+                    <section className={`pokeData ${props.class}`} >
+                        <p className={`pokeNumber`}>{idData < 10 ? `#00` : idData < 100 ? `#0` : `#`}{idData}</p>
                         <p className="pokeName">{props.name}</p>
                     </section>
                 </div>
