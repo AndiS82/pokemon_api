@@ -29,7 +29,6 @@ function DetailView() {
                 setPower(pokeData.moves);
                 setTypeData(pokeData.types);
                 console.log(typeData);
-                // console.log(pokeData.moves[0].move.name);
             })
     }, [])
     return (
@@ -43,7 +42,6 @@ function DetailView() {
                 })}
             </div>
 
-            {/* {console.log(toggle)} */}
             <div className='attackSection'>
                 <button type="button" onClick={() => { toggle === "hidden" ? setToggle("shown") : setToggle("hidden") }
                 } className="attackButton">Ablilities & Movements</button>
