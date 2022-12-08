@@ -17,10 +17,10 @@ function Pokemon(props) {
             })
     }, [props.name])
     return (
-        <div className="imgBox">
+        <div className={props.imgClass}>
             <Link to={`/details/${props.name}`} className="Link">
                 <div className="bkgYellow">
-                    <img src={imgData}></img>
+                    <img src={imgData} ></img>
                     <section className={`pokeData ${props.class}`} >
                         <p className={`pokeNumber`}>{idData < 10 ? `#00` : idData < 100 ? `#0` : `#`}{idData}</p>
                         <p className="pokeName">{props.name}</p>

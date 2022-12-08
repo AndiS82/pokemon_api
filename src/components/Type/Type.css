@@ -9,7 +9,6 @@
     border-radius: 10px;
     padding: 10px;
     width: 45%;
-    color: whitesmoke;
     border: 2px solid black;
     margin: 3rem;
     font-size: 1.2rem;
@@ -17,116 +16,140 @@
 }
 
 .bug {
-    background-color: lightgreen;
+    background-color: #3BB900;
     width: 100%;
     padding: 0;
 
 }
 
 .dark {
-    background-color: black;
+    background-color: #1C1C1C;
+    ;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }
 
 .dragon {
-    background-color: navy;
+    background-color: #00458A;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }
 
 .electric {
-    background-color: yellow;
+    background-color: #FFE600;
     width: 100%;
     padding: 0;
+    color: black;
 }
 
 .fairy {
-    background-color: pink;
+    background-color: #FFC2F9;
     width: 100%;
     padding: 0;
 }
 
 .fighting {
-    background-color: red;
+    background-color: #E40000;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }
 
 .fire {
-    background-color: orange;
+    background-color: #FF9900;
     width: 100%;
     padding: 0;
 }
 
 .flying {
-    background-color: lightblue;
+    background-color: #CCDADD;
     width: 100%;
     padding: 0;
 }
 
 .ghost {
-    background-color: darkorchid;
+    background-color: #5A1E64;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }
 
 .grass {
-    background-color: darkgreen;
+    background-color: #57921C;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }
 
 .ground {
-    background-color: brown;
+    background-color: #965A00;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }
 
 .ice {
-    background-color: skyblue;
+    background-color: #6AD2FF;
     width: 100%;
     padding: 0;
 }
 
 .normal {
-    background-color: lightgrey;
+    background-color: #B3B3B3;
     width: 100%;
     padding: 0;
 }
 
 .plant {
-    background-color: yellowgreen;
+    background-color: #70DF00;
     width: 100%;
     padding: 0;
 }
 
 .poison {
-    background-color: purple;
+    background-color: #AB00AE;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }
 
 .psychic {
-    background-color: violet;
+    background-color: #FF81F2;
     width: 100%;
     padding: 0;
 }
 
 .rock {
-    background-color: sandybrown;
+    background-color: #E1B237;
     width: 100%;
     padding: 0;
 }
 
 .steel {
-    background-color: teal;
+    background-color: #2A4950;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }
 
 .water {
-    background-color: blue;
+    background-color: #00A0E4;
+    width: 100%;
+    padding: 0;
+}
+
+.unknown {
+    background-color: #576a72;
+    color: whitesmoke;
+    width: 100%;
+    padding: 0;
+}
+
+.shadow {
+    background-color: dimgray;
+    color: whitesmoke;
     width: 100%;
     padding: 0;
 }

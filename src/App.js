@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Menu from './pages/Menu'
 import Details from './pages/Details'
 import Mode from "./img/mood.png"
+import TypeDetails from './pages/TypeDetails';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/details/:name" element={<Details />} />
+          <Route path="/type-details/:name" element={<TypeDetails />} ></Route>
         </Routes>
       </Router>
     </div>
