@@ -57,24 +57,24 @@ function Pokedex() {
     }
 
     return (
-        <div>
-            <section id="topSection">
+        <div className='pokedexWrapper'>
+            <section className="topSection">
                 <Link to={"/menu"}>
                     <img src={burger} />
                 </Link>
-                <input id="input" type="text" placeholder="Enter Pokemon ID or Name" onInput={e => setInputname(e.target.value)}></input>
+                <input id="input" type="text" placeholder="Enter Pokemon Name" onInput={e => setInputname(e.target.value)}></input>
 
-                {/* <button type="button" onClick={}>{mood}</button> */}
+
             </section>
-            <p>test pokedex</p>
             {/* <div className={navtog2}>
                 <Pokemon key={inputname} name={inputname} />
             </div> */}
-            <div className={navtog}> {useAbleData.map((singlePokemon, index) => {
-                // console.log(navtog)
-                // console.log(singlePokemon)
-                return <Pokemon key={index} name={singlePokemon.name} />
-            })}
+            <div className="pokeWrapper">
+                {useAbleData.map((singlePokemon, index) => {
+                    // console.log(navtog)
+                    // console.log(singlePokemon)
+                    return <Pokemon key={index} name={singlePokemon.name} />
+                })}
             </div>
         </div>
     )

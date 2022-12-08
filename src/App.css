@@ -1,36 +1,105 @@
-.App {
-  text-align: center;
+.App {}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("./fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("./fonts/Roboto-Bold.ttf");
+}
+
+.logo {
+  padding: 2rem;
+}
+
+.modeButton {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.bgcLight {
   background-color: #c4eafa;
+  text-align: center;
+  font-family: Roboto-Regular;
+  min-height: 100vh;
+}
+
+.bgcDark {
+  background-color: #131418;
+  text-align: center;
+  color: white;
+  font-family: Roboto-Regular;
+  min-height: 100vh;
 }
 
 /* Sofias Styling */
-.topSection {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 /* .input {
   width: 200px;
 } */
 
-.navtog {
+.pokeWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pokedexWrapper {
+
+  margin-top: 4rem;
+
+}
+
+.topSection {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 3rem auto;
+  /* grid-column: span 2; */
+}
+
+.topSection input {
+  margin-left: 2rem;
 }
 
 .imgBox {
   /* border: 2px solid black; */
-  margin: 15px;
+  margin: 15px auto;
+  width: 60%;
+
 }
 
 .imgBox div img {
-  border: 2px solig green;
+  /* border: 2px solid green; */
+  width: 100%;
+  margin-top: -4rem;
 }
 
 .bkgYellow {
-  background: rgb(2, 0, 36);
+  /* background: rgb(2, 0, 36); */
   background: linear-gradient(60deg, rgb(241, 239, 216) 0%, rgb(249, 200, 3) 100%);
   ;
+  border-radius: 25px;
+  margin: 5rem auto;
+  max-width: 200px;
+}
+
+.bkgDark {
+  /* background: rgb(2, 0, 36); */
+  background: linear-gradient(60deg, #7C97B2 0%, #071A2C 100%);
+  ;
+  border-radius: 25px;
+  margin: 5rem auto;
+  max-width: 200px;
 }
 
 .pokeData {
@@ -62,12 +131,30 @@
   padding: 0;
 }
 
+
+
 /* a:link {
   color: white;
 } */
 
 
 /* Sofia Ende */
+
+.attackSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.attackButton {
+  width: 45%;
+  background-color: transparent;
+  border: none;
+  margin: 2rem auto;
+  font-size: 2rem;
+  font-family: Roboto-Bold;
+  color: #FFCB07;
+  -webkit-text-stroke: 2px #2C72B8;
+}
 
 .App-logo {
   height: 40vmin;
@@ -95,6 +182,11 @@
   color: #61dafb;
 }
 
+.Link {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -102,5 +194,32 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .pokeWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .pokeWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pokeWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    margin: 0 auto;
   }
 }

@@ -11,16 +11,17 @@ function Pokemon(props) {
         fetch(`https://pokeapi.co/api/v2/pokemon/${props.name}`)
             .then((response) => response.json())
             .then((pokeData) => {
-                setImgData(pokeData.sprites?.front_default)
+                setImgData(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeData.id}.png`)
+                console.log(pokeData)
                 setIdData(pokeData.id)
                 // console.log(pokeData);
             })
-    }, [])
+    }, [props.name])
     // console.log("test")
     return (
         <div className="imgBox">
-            <Link to={`/details/${props.name}`}>
-                <div id="bkgYellow">
+            <Link to={`/details/${props.name}`} className="Link">
+                <div className="bkgYellow" id="PokeCardContainer">
                     {/* <p>test pokemon</p> */}
                     <img src={imgData}></img>
                     <section className="pokeData">
