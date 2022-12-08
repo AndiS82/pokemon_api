@@ -11,6 +11,8 @@ function App() {
 
   const [toggle, setToggle] = useState("bgcLight")
 
+  console.log(toggle)
+
   const toggleFunction = () => {
     if (toggle === "bgcDark") {
       setToggle("bgcLight");

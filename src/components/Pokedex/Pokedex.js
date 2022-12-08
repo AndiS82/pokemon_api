@@ -44,7 +44,7 @@ function Pokedex() {
 
 
             </section>
-            <div className="pokeWrapper"
+            <div className="pokeWrapper bkgYellow"
                 id="pokeWrapper">
                 {useAbleData.map((singlePokemon, index) => {
                     return <Pokemon key={index} name={singlePokemon.name} />
