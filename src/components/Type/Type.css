@@ -1,0 +1,132 @@
+.typeWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.typeBubble p {
+    border-radius: 10px;
+    padding: 10px;
+    width: 45%;
+    color: whitesmoke;
+    border: 2px solid black;
+    margin: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.bug {
+    background-color: lightgreen;
+    width: 100%;
+    padding: 0;
+
+}
+
+.dark {
+    background-color: black;
+    width: 100%;
+    padding: 0;
+}
+
+.dragon {
+    background-color: navy;
+    width: 100%;
+    padding: 0;
+}
+
+.electric {
+    background-color: yellow;
+    width: 100%;
+    padding: 0;
+}
+
+.fairy {
+    background-color: pink;
+    width: 100%;
+    padding: 0;
+}
+
+.fighting {
+    background-color: red;
+    width: 100%;
+    padding: 0;
+}
+
+.fire {
+    background-color: orange;
+    width: 100%;
+    padding: 0;
+}
+
+.flying {
+    background-color: lightblue;
+    width: 100%;
+    padding: 0;
+}
+
+.ghost {
+    background-color: darkorchid;
+    width: 100%;
+    padding: 0;
+}
+
+.grass {
+    background-color: darkgreen;
+    width: 100%;
+    padding: 0;
+}
+
+.ground {
+    background-color: brown;
+    width: 100%;
+    padding: 0;
+}
+
+.ice {
+    background-color: skyblue;
+    width: 100%;
+    padding: 0;
+}
+
+.normal {
+    background-color: lightgrey;
+    width: 100%;
+    padding: 0;
+}
+
+.plant {
+    background-color: yellowgreen;
+    width: 100%;
+    padding: 0;
+}
+
+.poison {
+    background-color: purple;
+    width: 100%;
+    padding: 0;
+}
+
+.psychic {
+    background-color: violet;
+    width: 100%;
+    padding: 0;
+}
+
+.rock {
+    background-color: sandybrown;
+    width: 100%;
+    padding: 0;
+}
+
+.steel {
+    background-color: teal;
+    width: 100%;
+    padding: 0;
+}
+
+.water {
+    background-color: blue;
+    width: 100%;
+    padding: 0;
+}
