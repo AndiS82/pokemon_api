@@ -47,7 +47,7 @@ function Pokedex() {
             <div className="pokeWrapper bkgYellow"
                 id="pokeWrapper">
                 {useAbleData.map((singlePokemon, index) => {
-                    return <Pokemon key={index} name={singlePokemon.name} />
+                    return <Pokemon key={index} name={singlePokemon.name} imgClass={"imgBox"} />
                 })}
             </div>
         </div>

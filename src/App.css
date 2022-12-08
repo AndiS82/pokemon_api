@@ -60,6 +60,18 @@
 
 .topSection input {
   margin-left: 2rem;
+  border: 3px solid #395AA4;
+  border-radius: 10px;
+  padding: 0 1rem;
+  background: linear-gradient(60deg, rgb(241, 239, 216) 0%, rgb(249, 200, 3) 100%);
+  font-weight: bold;
+  color: #395AA4;
+}
+
+.topSection img {
+  background-color: #395AA4;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 .imgBox {
@@ -148,11 +160,39 @@
 
 .pokeDetailStyle p {
   color: #FFCB07;
-  -webkit-text-stroke: 2px #2C72B8;
+  -webkit-text-stroke: 3px #395AA4;
   font-family: Roboto-Bold;
   font-weight: bolder;
   font-size: 3rem;
   margin: 2rem;
+}
+
+.pokeDetailImg {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.pokeDetailImg img {
+  width: 50%;
+}
+
+.returnArrow {
+  position: absolute;
+  left: 3rem;
+  top: 3rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #395AA4;
+  border-radius: 50%;
+}
+
+.returnArrow img {
+  width: 10px;
+  height: 10px;
+}
+
+.typeFilterSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 @keyframes App-logo-spin {

@@ -5,8 +5,9 @@ import PokeDetails from '../components/PokeDetails/PokeDetails';
 import Attacks from "../components/Attacks/Attacks"
 import Movements from "../components/Movements/Movements"
 import "./Details.css"
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Type from '../components/Type/Type';
+import Arrow from "../img/arrow.png";
 
 function DetailView() {
 
@@ -33,8 +34,9 @@ function DetailView() {
     }, [])
     return (
         < section >
+            <Link to="/" className='returnArrow'><img src={Arrow} /></Link>
             <Logo />
-            <Pokemon key={idData.id} name={name} class={"pokeDetailStyle"} />
+            <Pokemon key={idData.id} name={name} class={"pokeDetailStyle"} imgClass={"pokeDetailImg"} />
             <PokeDetails key={idData.id - 2} />
             <div className='typeWrapper'>
                 {typeData.map((singleType) => {
